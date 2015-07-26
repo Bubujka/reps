@@ -1,0 +1,19 @@
+{
+  "name": "reps",
+  "version": "1.0.0",
+  "description": "list repositories",
+  "main": "index.js",
+  "bin": {
+    "reps": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^1.4.0",
+    "printf": "^0.2.3",
+    "request": "^2.60.0"
+  }
+}
