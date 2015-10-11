@@ -53,7 +53,7 @@ async.parallel({
       })
       .map(function(i) {
         var name = i.replace(/.*] /,'');
-        return printf("bb:%-50s%s", name, 'http://bitbucket.org/'+name+'/src');
+        return printf("bb:%-50s%s", name, 'http://bitbucket.org/'+name);
       });
       cb(null, bbreps);
     });
