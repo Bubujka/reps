@@ -42,7 +42,7 @@ function gh_page_starred(id, cb){
 }
 
 async.parallel({
-  bb: function(cb) {
+  /*bb: function(cb) {
     exec('bb list | grep git', function(err,reps) {
       if(err){
         return cb(err);
@@ -58,6 +58,7 @@ async.parallel({
       cb(null, bbreps);
     });
   },
+  */
   gh: function(cb) {
     var page = 1;
     var reps = [];
@@ -106,7 +107,7 @@ async.parallel({
   t = t + data.gh_starred.join('\n');
   t = t + '\n';
   t = t + data.gh.join('\n');
-  t = t + '\n';
-  t = t + data.bb.join('\n');
+  //t = t + '\n';
+  //t = t + data.bb.join('\n');
   fs.writeFileSync('/home/bubujka/.reps', t);
 });
